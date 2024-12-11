@@ -6,5 +6,5 @@ uvicorn
 fastapi
 aiofiles
 python-multipart
-skimage
+scikit-image
 gdown
