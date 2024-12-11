@@ -20,9 +20,29 @@ The application has three simple functions:
 ### Install
 
 1. Download the Dockerfile
-2. In the same directory run "docker build -t bg-remove ."
-3. Start the Image via  "docker run -p 8000:8000 bg-remove" for example.
+2. In the same directory run
+```
+docker build -t bg-remove .
+```
+4. Start The container via One of the Following options
 
+*Via The Terminal:*
+```
+docker run -p 8000:8000 bg-remove
+```
+*Via Docker Compose:*
+```yaml
+services:
+  bg-remove:
+    container_name: bg-remove
+    image: bg-remove
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    volumes:
+      - ./input:/app/bg-remove-augment-docker/webapp/images-input # Optional if you want to mount the Input folder
+      - ./output:/app/bg-remove-augment-docker/webapp/images-output # Optional if you want to mount the Output folder
+```
 It schould now be reachable via 
 
 | http://localhost:8000/ |  Front-end to perform background remove.
