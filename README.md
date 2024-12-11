@@ -1,6 +1,6 @@
 # Background Removal with Deep Learning
 
-This repository show the code to remove the background of the pictures using the [U2Net](https://arxiv.org/pdf/2005.09007.pdf) pre-trained model.
+This repository shows the code to remove the background of the pictures using the [U2Net](https://arxiv.org/pdf/2005.09007.pdf) pre-trained model.
 
 The application has three simple functions:
 
@@ -17,39 +17,17 @@ The application has three simple functions:
 
 ![Demo](assets/demo2.gif)
 
+### Install
 
+1. Download the Dockerfile
+2. In the same directory run "docker build -t bg-remove ."
+3. Start the Image via  "docker run -p 8000:8000 bg-remove" for example.
 
-### Endpoint available
-| Endpoint | Description
-| --- | ---
+It schould now be reachable via 
+
 | http://localhost:8000/ |  Front-end to perform background remove.
 | http://localhost:8000/augmentation |  Front-end to perform augment images.
 
-
-### Install
-1. Clone this repository
-```bash
-git clone https://github.com/renatoviolin/bg-remove-augment.git
-cd bg-remove-augment
-```
-
-2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-
-3. Download the pre-trained model
-```bash
-gdown --id 1ao1ovG1Qtx4b7EoskHXmi2E9rp5CHLcZ -O ./ckpt/u2net.pth
-```
-
-
-4. Start web-application
-```bash
-cd webapp
-uvicorn app:app --host 0.0.0.0 --port 8000
-```
 
 ### References
 U2Net: [https://github.com/xuebinqin/U-2-Net](https://github.com/xuebinqin/U-2-Net)
