@@ -24,7 +24,7 @@ The application has three simple functions:
 ```
 docker build -t bg-remove .
 ```
-4. Start The container via One of the Following options
+4. Start the container via one of the following options
 
 *Via The Terminal:*
 ```
