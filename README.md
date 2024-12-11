@@ -26,6 +26,7 @@ The application has three simple functions:
 It schould now be reachable via 
 
 | http://localhost:8000/ |  Front-end to perform background remove.
+
 | http://localhost:8000/augmentation |  Front-end to perform augment images.
 
 
